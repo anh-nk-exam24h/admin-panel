@@ -1,0 +1,41 @@
+/*---- block css AutosizeInput --- */
+
+.custom-radio input:checked {
+    background-color: #fff;
+}
+
+.custom-radio input::before {
+    background-color: #228be6 !important;
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.tikc-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    /* background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    
+    */
+    background-image: url('./Vector 2.svg');
+    background-repeat: no-repeat;
+    background-position-x: 97%;
+    background-position-y: 15px;
+    border: 1px solid #B2B2B2;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 25px;
+    height: 42px;
+    width: fit-content;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    /* position: relative; */
+}
+
+.tikc-select:focus {
+    border: 1px solid #017EFA;
+    outline: none;
+    background-image: url('./Vector.svg');
+    background-position-x: 97%;
+    background-position-y: 15px;
+}

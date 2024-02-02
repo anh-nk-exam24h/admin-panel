@@ -1,0 +1,11 @@
+.unborder_input input {
+  border: none !important;
+  min-width: 0px !important;
+  border-radius: 0px !important;
+  padding: 0rem !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important ;
+}
+.border_input input {
+  border: 1px solid #ced4da !important;
+}

@@ -1,0 +1,77 @@
+export const defaultForm = {
+  properties: [
+    {
+      name: 'Tên câu hỏi',
+      type: 'name',
+      inputType: 'string',
+      scope: 'question',
+      isAutoComputed: false,
+    },
+    {
+      name: 'Lớp học',
+      type: 'listClass',
+      inputType: 'array',
+      scope: 'question',
+      isAutoComputed: false,
+    },
+    {
+      name: 'Môn học',
+      type: 'listSubject',
+      inputType: 'array',
+      scope: 'question',
+      isAutoComputed: false,
+    },
+    {
+      name: 'Loại câu hỏi',
+      type: 'type',
+      inputType: 'number',
+      scope: 'question',
+      isAutoComputed: false,
+    },
+    {
+      name: 'Cấp độ nhận biết câu hỏi',
+      type: 'awareness_level',
+      inputType: 'number',
+      scope: 'question',
+      isAutoComputed: false,
+    },
+    {
+      name: 'Độ khó câu hỏi',
+      type: 'level',
+      inputType: 'number',
+      scope: 'question',
+      isAutoComputed: false,
+    },
+    {
+      name: 'Kiểu câu hỏi',
+      type: 'quiz_type',
+      inputType: 'number',
+      scope: 'question',
+      isAutoComputed: false,
+    },
+    {
+      name: 'Chuyên đề',
+      type: 'thematic',
+      inputType: 'array',
+      scope: 'question',
+      isAutoComputed: false,
+    },
+    {
+      name: 'Đơn vị kiến thức',
+      type: 'knowledgeUnit',
+      inputType: 'array',
+      scope: 'question',
+      isAutoComputed: false,
+    },
+    {
+      name: 'Mức độ tư duy',
+      type: 'thinking_level',
+      inputType: 'number',
+      scope: 'question',
+      isAutoComputed: false,
+    },
+  ],
+  propertyConfig: {
+    disable: [],
+  },
+};

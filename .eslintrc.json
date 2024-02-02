@@ -1,0 +1,81 @@
+{
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "babelOptions": {
+      "presets": ["@babel/preset-react"] // <<<< Important
+    },
+    // "requireConfigFile": false, // <== ADD THIS
+    "ecmaVersion": 12, // Allows for the parsing of modern ECMAScript features
+    "sourceType": "module", // Allows for the use of imports
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
+
+  "plugins": ["react", "react-hooks", "prettier", "simple-import-sort"],
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "local",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/react-in-jsx-scope": "off",
+    "camelcase": "error",
+    "spaced-comment": "error",
+    "no-duplicate-imports": "error",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    // "import/extensions": ["error", "never", { "svg": "always" }],
+    "@typescript-eslint/no-empty-function": 1,
+    "default-case": "error",
+    "no-extra-semi": "error",
+    "no-var": "error",
+    "require-await": "error",
+    "eol-last": ["error", "always"],
+    "space-before-blocks": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Packages `react` related packages come first.
+          ["^react", "^@?\\w"],
+          ["^next", "^@?\\w"],
+          // Internal packages.
+          ["^(@|components)(/.*|$)"],
+          // Side effect imports.
+          ["^\\u0000"],
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Style imports.
+          ["^.+\\.?(css)$"]
+        ]
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // React version. "detect" automatically picks the version you have installed.
+    }
+  },
+  "ignorePatterns": [
+    "/src/package/ckeditor5/*",
+    "**/*.css",
+    "/src/enum",
+    "**/type.ts",
+    "**/type.d.ts",
+    "**/types.ts"
+  ],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"]
+}
